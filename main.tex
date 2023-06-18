@@ -276,7 +276,7 @@
 
 In recent years, the formal methods community witnessed an increased interest in
 formal verification of \emph{hyperproperties} \cite{ClarksonS08}.
-In constrast with the usual \emph{trace properties}, which are predicates on traces,
+In contrast with the usual \emph{trace properties}, which are predicates on traces,
 hyperproperties are predicates on \emph{sets of traces}, which gives them an extra expressive power.
 This power can be used for expressing functional properties (e.g. commutativity) as well as security properties
 (e.g. information flow policies).
@@ -289,8 +289,18 @@ the class of $1$-safety properties corresponds exactly to the well-known class o
 Similarly, in recent years there have been a lot of interest in applying formal methods
 in the area of decentralized finance and cryptocurrencies - namely,
 for analysis and verification of \emph{smart contracts}.
-Intuitively, smart contracts are small programs that run on a blockchain and, when invoked, perform a
+Intuitively, smart contracts are (usually small) programs that run on a blockchain and, when invoked, perform a
 (typically financial) transaction.
+To ensure safety and security of smart contracts, a number of analysis and verification tools have been developed;
+Most of the tools
+(\cite{SchneidewindGSM20,HoRStify,PermenevDTDV20,TsankovDDGBV18,KalraGDS18,GrishchenkoMS18} - see \cite{fbloc.2022.814977}
+for a systematic review)
+target the Ethereum blockchain and the instruction set of its virtual machine, EVM.
+Outside Ethereum, a few tools including MOPSA, Micse, and Tezla has been used for automatic verification of Michelson programs
+targetting the Tezos blockchain, while Mi-cho-Coq~\cite{BernardoCHPT19}
+has been used for interactive verification on the same platform.
+
+
 
 
 \section{Preliminaries}
