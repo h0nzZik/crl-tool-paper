@@ -292,7 +292,7 @@ for analysis and verification of \emph{smart contracts}.
 Intuitively, smart contracts are (usually small) programs that run on a blockchain and, when invoked, perform a
 (typically financial) transaction.
 To ensure safety and security of smart contracts, a number of analysis and verification tools have been developed;
-Most of the tools
+most of the tools
 (\cite{SchneidewindGSM20,HoRStify,PermenevDTDV20,TsankovDDGBV18,KalraGDS18,GrishchenkoMS18} - see \cite{fbloc.2022.814977}
 for a systematic review)
 target the Ethereum blockchain and the instruction set of its virtual machine, EVM.
@@ -300,6 +300,24 @@ Outside Ethereum, a few tools including MOPSA, Micse, and Tezla has been used fo
 targetting the Tezos blockchain, while Mi-cho-Coq~\cite{BernardoCHPT19}
 has been used for interactive verification on the same platform.
 
+Most of the available tools focus mainly on safety properties, or specific security properties such as non-interference
+(which is a 2-safety property).
+We are not aware of any tools that would be able to verify general 2-safety, or even more general $k$-safety properties
+on smart contracts.
+However, many desired features of smart contracts are proper 2-safety properties.
+For example, in \cite{SmartContractSynthesisModuloHyperproperties} the authors identify several
+desirable hyperproperties of
+a voting contract, such as determinism (the result is determined by votes only),
+symmetry (all agents are treated equally), and monotonicity (a vote for the current winner does not harm him).
+
+
+
+
+\begin{tabular}{c|c|c}
+    Tool & safety & non-interference & 2-safety & $k$-safety
+    \hline
+    
+\end{tabular}
 
 
 
